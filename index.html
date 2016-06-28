@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>FlexPipe by FlexPipe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">FlexPipe</h1>
+      <h2 class="project-tagline">The flexible pipe to coordinate masses of players to the right spigot.</h2>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="flexpipe-" class="anchor" href="#flexpipe-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FlexPipe <a href="https://ci.janmm14.de/job/public%7Eserver%7EFlexPipe"><img src="https://ci.janmm14.de/buildStatus/icon?job=public%7Eserver%7EFlexPipe" alt="Build Status"></a>
+</h1>
+
+<p>Build upon <a href="https://github.com/SpigotMC/BungeeCord">BungeeCord</a>, FlexPipe is created to provide optimizations, more
+stability and security. Originally built for <a href="https://www.minotopia.me">minotopia.me</a>, FlexPipe's changes to BungeeCord
+are well tested and properly documented. Due to the patch system, updates of BungeeCord are automatically reflected in
+the newest builds.</p>
+
+<h2>
+<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is it?</h2>
+
+<p>BungeeCord and therefore FlexPipe is a server portal system that can be used to let players teleport
+between multiple minecraft servers, preferably spigot servers (and derivates). It does so by letting the client think
+its a world change while the system disconnects from the previous minecraft server and connects to the target minecraft
+server.</p>
+
+<h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+
+<p><a href="https://github.com/minotopiame/FlexPipe/tree/master/patches">Complete patch list</a></p>
+
+<p>Here is a list of notable changes done in FlexPipe, see individual patches for people who helped out:</p>
+
+<ul>
+<li>Join throttle applied as early as possible</li>
+<li>Throttle tab completion as some plugins might get overloaded if its spammed</li>
+<li>Differentiate between pings ad joins in logging, possibility to turn off ping logging</li>
+<li>Allow modification of the module source url</li>
+<li>Option to turn off module downloading / updating</li>
+<li>Tweaking netty values to be optimal</li>
+<li>Ability to edit bungeecord messages without modifying the jar</li>
+<li>Resolve possible deadlock</li>
+<li>Little optimizations</li>
+<li>Lower log output on invalid packet order</li>
+<li>Close connections without a half-second delay</li>
+<li>Keep compatibility with older pinging tools for version 1.8</li>
+<li>Validate compressed packets against compression threshold</li>
+<li>Be more strict when validating chat</li>
+<li>API for unusual behaviour detection</li>
+<li>Be faster than optimized reflection with dynamically created classes:
+** Faster event handling
+** Faster packet interception</li>
+<li>Don't copy memory where possible</li>
+<li>Massively reduce memory usage when scoreboard plugins create many teams</li>
+<li>Allow the console to tab-complete</li>
+</ul>
+
+<h1>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h1>
+
+<p>You can download the newest builds from my <a href="https://ci.janmm14.de/job/public%7Eserver%7EFlexPipe">Jenkins</a>. The latest build
+is always the recommended build, except otherwise stated.</p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>Simply download your FlexPipe.jar and start it with java once. Then you can find additional configuration options in
+your config.yml file. I suggest to turn on automatic module updates to recieve module updates automatically after
+downloading a new FlexPipe.jar</p>
+
+<h1>
+<a id="compilation" class="anchor" href="#compilation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compilation</h1>
+
+<p>This project uses maven to handle its dependencies.</p>
+
+<p>The compilation of FlexPipe is fairly easy. At first you need to clone this repository with git. Then you need to
+execute <code>./reset-apply-build.sh</code> in a bash environment. You can get it on windows mostly by right-clicking in the
+file explorer and selecting "Git Bash". The final files are copied into the <code>target</code> folder.</p>
+
+<p><strong>Be careful</strong> if you have done changes in the BungeeCord folder which are not saved as a patch yet. In that case, <strong>never</strong> run <code>./reset-apply-build.sh</code> or <code>./reset.sh</code>, these will <strong>reset</strong> your changes to BungeeCord. You should then only run <code>./build.sh</code> instead to compile flexpipe.</p>
+
+      <footer class="site-footer">
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
